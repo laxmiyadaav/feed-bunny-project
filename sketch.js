@@ -83,7 +83,8 @@ function setup() {
   button2.size(50,50);
 
  // write a correct block of code to add button to cut the rope 
- 
+ button.mouseClicked(drop);
+ button2.mouseClicked(drop);
 
   ellipseMode(RADIUS);
 }
@@ -113,7 +114,7 @@ function draw()
     World.remove(engine.world,fruit);
     fruit = null;
    //Code to change the animation of a bunny when a collision with fruit and bunny is detected. 
-   bunny.changeAnimation(collided,bunny_collided)
+   bunny.changeAnimation("eating")
   }
   
   if(collide(fruit,bubble,40) == true)
